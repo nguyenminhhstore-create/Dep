@@ -345,7 +345,6 @@ function dangXuat(){
     alert('Đã đăng xuất!');
 }
 
-// === QUẢN LÝ DANH MỤC ===
 function luuDanhMuc(){
     if(!nguoiDung || nguoiDung.loai!=='chu') return alert('Chỉ Admin!');
     let ten = document.getElementById('tenDanhMuc').value.trim();
@@ -363,7 +362,6 @@ function xoaDanhMuc(idx){
     luuDuLieu(); taiDuLieu();
 }
 
-// === QUẢN LÝ SẢN PHẨM ===
 function dangBan(){
     if(!nguoiDung || nguoiDung.loai!=='chu') return alert('Chỉ Admin!');
     let ten = document.getElementById('tenSP').value.trim();
@@ -377,4 +375,5 @@ function dangBan(){
     dsSanPham.push({ten,ma,danhMuc:dm,linkAnh:link,gia,matKhau:mk,moTa:mt});
     luuDuLieu(); taiDuLieu();
     document.getElementById('tb-dangban').style.display='block';
-    setTimeout(()=>document.getElementById('tb-dangban').style.display=
+    setTimeout(()=>document.getElementById('tb-dangban').style.display='none',3000);
+    document.getElementById('tenSP').value
